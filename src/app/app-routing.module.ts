@@ -7,11 +7,7 @@ const routes: Routes = [
         pathMatch: 'full',
         redirectTo: '/dashboard',
     },
-    {
-        path: 'charts',
-        loadChildren: () =>
-            import('modules/charts/charts-routing.module').then(m => m.ChartsRoutingModule),
-    },
+       
     {
         path: 'dashboard',
         loadChildren: () =>
@@ -23,6 +19,16 @@ const routes: Routes = [
         path: 'auth',
         loadChildren: () =>
             import('modules/auth/auth-routing.module').then(m => m.AuthRoutingModule),
+    },
+    {
+        path: 'charts',
+        loadChildren: () =>
+            import('modules/charts/charts-routing.module').then(m => m.ChartsRoutingModule),
+    },
+    {
+        path: 'reports',
+        loadChildren: () =>
+            import('modules/reports/reports-routing.module').then(m => m.ReportsRoutingModule),
     },
     {
         path: 'error',
